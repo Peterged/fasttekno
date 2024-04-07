@@ -1,0 +1,28 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    background-color: var(--blue-900);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--blue-800);
+}
+
+.btn-primary {
+    background-color: var(--blue-900);
+}
+
+.radius-full {
+    border-radius: 9999px;
+}
+
+.radius-normal {
+    border-radius: 1rem;
+}

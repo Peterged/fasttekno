@@ -1,0 +1,54 @@
+main {
+    padding: 0.5rem 1rem;
+    min-height: 100vh;
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+main .content .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .content .right {
+    display: flex;
+    gap: 1rem;
+}
+
+main .input-box form {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+}
+
+main input:not([type="submit"]) {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    
+    transition: 250ms;
+    min-width: 220px
+}
+
+main input[type="submit"] {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--blue-900);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
