@@ -19,6 +19,7 @@ main .content {
 
 main .content .left {
     display: flex;
+    min-width: 400px;
     flex-direction: column;
     gap: 1rem;
 }
@@ -28,20 +29,32 @@ main .content .right {
     gap: 1rem;
 }
 
-main .input-box form {
+main .input-box {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    padding: 0.25rem;
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 4rem;
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: 250ms;
+}
+
+main .input-box:has(input:not([type="submit"]):focus) {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--blue-900);
 }
 
 main input:not([type="submit"]) {
     border: none;
-    padding: 1rem;
+    padding: 0.5rem;
+    padding-left: 0.75rem;
     border-radius: 1rem;
     outline: none;
-    
     transition: 250ms;
-    min-width: 220px
+    min-width: 220px;
+    font-size: 0.9rem;
 }
 
 main input[type="submit"] {
@@ -51,4 +64,66 @@ main input[type="submit"] {
     color: white;
     cursor: pointer;
     transition: 0.2s;
+}
+
+/* Employer / Candidate */
+section#employer-candidate {
+    min-height: 350px;
+    height: auto;
+    padding: 1rem;
+    background-color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#employer-candidate .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+section#employer-candidate .content .content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 1.75rem;
+    border-radius: 1rem;
+    width: 500px;
+    min-height: 220px;
+    background-color: var(--blue-50);
+    transition: 0.2s;
+}
+
+section#employer-candidate .content .content-box:hover {
+    background-color: var(--blue-50);
+}
+
+section#employer-candidate .content .content-box img {
+    width: 200px;
+    height: auto;
+}
+
+section#employer-candidate .content .content-box .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section#employer-candidate .content .content-box .text button {
+    margin-top: 1.25rem;
+    width: fit-content;
+}
+
+
+/* LATEST JOBS */
+section#latest-jobs {
+    min-height: 350px;
+    height: auto;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
 }
